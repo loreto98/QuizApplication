@@ -1,21 +1,25 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">#37474F</item>
-        <item name="colorPrimaryDark">#263238</item>
-        <item name="colorAccent">#607D8B</item>
-    </style>
-
-    <style name="MyThemeNoBar" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="windowNoTitle">false</item>
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="colorPrimary">#37474F</item>-->
+        <!--<item name="colorPrimaryDark">#263238</item>-->
+        <!--<item name="colorAccent">#607D8B</item>-->
+    <!--</style>-->
+<!---->
+    <style name="MyThemeNoBar" parent="Theme.AppCompat">
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="colorPrimary">#37474F</item>
         <item name="colorPrimaryDark">#263238</item>
         <item name="colorButtonNormal">#607D8B</item>
         <item name="colorAccent">#90CAF9</item>
+    </style>
+
+    <style name="MyThemeNoBar.noActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="AppTitle">
@@ -30,7 +34,6 @@
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:textSize">12sp</item>
         <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:layout_below">@id/TitleApp</item>
     </style>
 
     <style name="QuestionTitle">
@@ -71,6 +74,12 @@
         <item name="android:layout_centerHorizontal">true</item>
     </style>
 
-
+    <style name="CardStyle" parent="CardView">
+        <item name="cardBackgroundColor">@color/cardview_dark_background</item>
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardElevation">8dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
 
 </resources>
