@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    int press = 0;
+
     int score = 0;
     int totChecked = 0;
 
@@ -103,42 +105,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onCheckBoxThirdQuestion(View view) {
-        // Is the view now checked?
-        boolean checked = ((CheckBox) view).isChecked();
-        // Check which checkbox was clicked
-        switch (view.getId()) {
-            case R.id.CheckBox1ThirdQuestion:
-                if (checked) {
-                    totChecked++;
-                    break;
-                } else {
-                    totChecked = 0;
-                    break;
-                }
-            case R.id.CheckBox2ThirdQuestion:
-                if (checked) {
-                    totChecked++;
-                    break;
-                } else {
-                    totChecked = 0;
-                    break;
-                }
-            case R.id.CheckBox3ThirdQuestion:
-                if (checked) {
-                    totChecked++;
-                    break;
-                } else {
-                    totChecked = 0;
-                    break;
-                }
-            case R.id.CheckBox4ThirdQuestion:
-                if (checked) {
-                    totChecked = 0;
-                    break;
-                } else
-                    break;
-        }
-        if (totChecked == 3)
+        CheckBox questionOne = (CheckBox) findViewById(R.id.CheckBox1ThirdQuestion);
+        CheckBox questionTwo = (CheckBox) findViewById(R.id.CheckBox2ThirdQuestion);
+        CheckBox questionThree = (CheckBox) findViewById(R.id.CheckBox3ThirdQuestion);
+        CheckBox questionFour = (CheckBox) findViewById(R.id.CheckBox4ThirdQuestion);
+
+        boolean isQuestionOneChecked = questionOne.isChecked();
+        boolean isQuestionTwoChecked = questionTwo.isChecked();
+        boolean isQuestionThreeChecked = questionThree.isChecked();
+        boolean isQuestionFourChecked = questionFour.isChecked();
+
+        if(isQuestionOneChecked && isQuestionTwoChecked && isQuestionThreeChecked && !isQuestionFourChecked)
             score++;
     }
 
@@ -148,17 +125,22 @@ public class MainActivity extends AppCompatActivity {
         } else {
             tempSixth = 0;
         }
+
         if (userSixthQuestion.getText().toString().toLowerCase().equals(rightAnswerQuestionSixth)) {
             tempSixth = 1;
         } else {
             tempSixth = 0;
         }
+
+        score = score + tempSixth + tempFourth;
     }
 
     public void checkAnswers(View view) {
-        calculatePoints();
-        score = score + tempSixth + tempFourth;
-
+        if (press == 0) {
+            calculatePoints();
+            onCheckBoxThirdQuestion(view);
+        }
+        press++;
         display();
     }
 
