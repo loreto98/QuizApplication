@@ -12,16 +12,10 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    int press = 0;
-
     int score = 0;
-    int totChecked = 0;
 
     EditText userSixthQuestion;
     EditText userFourthQuestion;
-
-    int tempFourth = 0;
-    int tempSixth = 0;
 
     String rightAnswerQuestionFourth = "Hawking";
     String rightAnswerQuestionSixth = "8";
@@ -42,66 +36,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onRadioButtonFirstQuestion(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.radio1FirstQuestion:
-                if (checked) {
-                    score++;
-                    break;
-                }
-            case R.id.radio2FirstQuestion:
-                if (checked)
-                    break;
-            case R.id.radio3FirstQuestion:
-                if (checked)
-                    break;
-            case R.id.radio4FirstQuestion:
-                if (checked)
-                    break;
-        }
+        RadioButton correctFirstQuestion = (RadioButton) findViewById(R.id.radio1FirstQuestion);
+        boolean iscorrectFirstQuestionChecked = correctFirstQuestion.isChecked();
+        if(iscorrectFirstQuestionChecked)
+            score+=1;
     }
 
     public void onRadioButtonSecondQuestion(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.radio1SecondQuestion:
-                if (checked)
-                    break;
-            case R.id.radio2SecondQuestion:
-                if (checked)
-                    break;
-            case R.id.radio3SecondQuestion:
-                if (checked) {
-                    score++;
-                    break;
-                }
-            case R.id.radio4SecondQuestion:
-                if (checked)
-                    break;
-        }
+        RadioButton correctSecondQuestion = (RadioButton) findViewById(R.id.radio3SecondQuestion);
+        boolean iscorrectSecondQuestionChecked = correctSecondQuestion.isChecked();
+        if(iscorrectSecondQuestionChecked)
+            score+=1;
     }
 
     public void onRadioButtonFifthQuestion(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.radio1FifthQuestion:
-                if (checked)
-                    break;
-            case R.id.radio2FifthQuestion:
-                if (checked)
-                    break;
-            case R.id.radio3FifthQuestion:
-                if (checked) {
-                    score++;
-                    break;
-                }
-            case R.id.radio4FifthQuestion:
-                if (checked)
-                    break;
-        }
+        RadioButton correctFifthQuestion = (RadioButton) findViewById(R.id.radio3FifthQuestion);
+        boolean iscorrectFifthQuestionChecked = correctFifthQuestion.isChecked();
+        if(iscorrectFifthQuestionChecked)
+            score+=1;
     }
 
     public void onCheckBoxThirdQuestion(View view) {
@@ -115,33 +67,26 @@ public class MainActivity extends AppCompatActivity {
         boolean isQuestionThreeChecked = questionThree.isChecked();
         boolean isQuestionFourChecked = questionFour.isChecked();
 
-        if(isQuestionOneChecked && isQuestionTwoChecked && isQuestionThreeChecked && !isQuestionFourChecked)
+        if (isQuestionOneChecked && isQuestionTwoChecked && isQuestionThreeChecked && !isQuestionFourChecked)
             score++;
     }
 
     private void calculatePoints() {
-        if (userFourthQuestion.getText().toString().toLowerCase().equals(rightAnswerQuestionFourth)) {
-            tempSixth = 1;
-        } else {
-            tempSixth = 0;
-        }
+        if (userFourthQuestion.getText().toString().toLowerCase().equals(rightAnswerQuestionFourth))
+            score++;
 
-        if (userSixthQuestion.getText().toString().toLowerCase().equals(rightAnswerQuestionSixth)) {
-            tempSixth = 1;
-        } else {
-            tempSixth = 0;
-        }
-
-        score = score + tempSixth + tempFourth;
+        if (userSixthQuestion.getText().toString().toLowerCase().equals(rightAnswerQuestionSixth))
+            score++;
     }
 
     public void checkAnswers(View view) {
-        if (press == 0) {
-            calculatePoints();
-            onCheckBoxThirdQuestion(view);
-        }
-        press++;
+        calculatePoints();
+        onCheckBoxThirdQuestion(view);
+        onRadioButtonFifthQuestion(view);
+        onRadioButtonFirstQuestion(view);
+        onRadioButtonSecondQuestion(view);
         display();
+        score=0;
     }
 
     public void display() {
