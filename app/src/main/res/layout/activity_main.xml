@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             app:contentScrim="?attr/colorPrimary"
             android:background="@drawable/space"
-            app:layout_scrollFlags="scroll">
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <ImageView
                 android:id="@+id/expandedImage"
@@ -440,6 +440,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
+                android:onClick="checkAnswers"
                 android:text="@string/CheckButton" />
 
         </LinearLayout>
