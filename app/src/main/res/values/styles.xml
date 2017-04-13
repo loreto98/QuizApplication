@@ -1,0 +1,76 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#37474F</item>
+        <item name="colorPrimaryDark">#263238</item>
+        <item name="colorAccent">#607D8B</item>
+    </style>
+
+    <style name="MyThemeNoBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorPrimary">#37474F</item>
+        <item name="colorPrimaryDark">#263238</item>
+        <item name="colorButtonNormal">#607D8B</item>
+        <item name="colorAccent">#90CAF9</item>
+    </style>
+
+    <style name="AppTitle">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">65sp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+
+    <style name="Suggestion">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_below">@id/TitleApp</item>
+    </style>
+
+    <style name="QuestionTitle">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:background">#323232</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="QuestionText">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="RadioSelections">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="CheckBoxSelections">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="EditText">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:inputType">textCapWords</item>
+        <item name="android:imeOptions">actionDone</item>
+    </style>
+
+    <style name="CheckButton">
+        <item name="android:background">#2f2f2f</item>
+        <item name="android:layout_below">@id/SixthQuestion</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+
+
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+
+    <dimen name="text_images_margin">30dp</dimen>
+
+    <dimen name="CardMargin">20dp</dimen>
+
+
+</resources>

@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Quiz Application</string>
+    <string name="TitleApp">Space quiz</string>
+    <string name="suggestion">not for amateurs</string>
+    <string name="CheckButton">Check Answers</string>
+    <string name="Question1">First Question</string>
+    <string name="Question2">Second Question</string>
+    <string name="Question3">Third Question</string>
+    <string name="Question4">Fourth Question</string>
+    <string name="Question5">Fifth Question</string>
+    <string name="Question6">Sixth Question</string>
+
+    <string name="FirstQuestion">What is the biggest object in the Universe?</string>
+    <string name="FirstQuestionFirstOption">The Great Gamma-Ray Burst Wall</string>
+    <string name="FirstQuestionSecondOption">The Giant Gamma-Ray Burst Ring</string>
+    <string name="FirstQuestionThirdOption">The Sloan Great Wall</string>
+    <string name="FirstQuestionFourthOption">The Laniakea Supercluster</string>
+
+    <string name="SecondQuestion">What is Schwarzschild radius?</string>
+    <string name="SecondQuestionFirstOption">The length scale at which the structure of spacetime becomes dominated by quantum effects, and it is impossible to determine the difference between two locations less than one Planck length apart.</string>
+    <string name="SecondQuestionSecondOption">The distance at which one astronomical unit subtends an angle of one arcsecond.</string>
+    <string name="SecondQuestionThirdOption">The radius of a sphere such that, if all the mass of an object were to be compressed within that sphere, the escape velocity from the surface of the sphere would equal the speed of light</string>
+    <string name="SecondQuestionFourthOption">The distance from Earth to the Sun</string>
+
+    <string name="ThirdQuestion">What happens when a star with a really big mass dies?</string>
+    <string name="ThirdQuestionFirstOption">It explodes in a SuperNova</string>
+    <string name="ThirdQuestionSecondOption">It gives life to a Black Hole</string>
+    <string name="ThirdQuestionThirdOption">It gives life to a neutrino star</string>
+    <string name="ThirdQuestionFourthOption">It creates a white dwarf</string>
+
+    <string name="FourthQuestion">Who said that also Black Holes lose mass?</string>
+    <string name="EditTextFourthQuestion">Scientist Name</string>
+
+
+    <string name="FifthQuestion">To which Supercluster is part of the Milky Way?</string>
+    <string name="FifthQuestionFirstOption">Pavo-Indus Supercluster</string>
+    <string name="FifthQuestionSecondOption">Hydra-Centaurus Supercluster</string>
+    <string name="FifthQuestionThirdOption">Laniakea Supercluster</string>
+    <string name="FifthQuestionFourthOption">Hercules Superclusters</string>
+
+
+    <string name="SixthQuestion">How much time in minutes takes for the light to reach earth?</string>
+    <string name="EditTextSixthQuestion">Time in minutes </string>
+
+</resources>
